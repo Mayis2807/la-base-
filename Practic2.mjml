@@ -1,0 +1,70 @@
+<mjml>
+  <mj-head>
+    <mj-title>Salón del Cómic de València</mj-title>
+    <mj-preview>Cómic de València</mj-preview>
+    <mj-attributes>
+      <mj-text padding="0" />
+      <mj-all font-family="Arial" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <!-- Imagen de la feria como cabecera -->
+    <mj-wrapper full-width="full-width">
+      <mj-section background-color="#ffffff" >
+        <mj-column width="100%">
+          <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012356/img1_1_zzpudf.jpg"   alt="imagen de publicidad">
+          </mj-image>
+        </mj-column>
+      </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          ¡Vive la emoción de la Moto GP en Valencia!
+        </mj-text>
+        <mj-text>
+          "¿Eres un fanático de las motos? ¡No te pierdas la oportunidad de vivir la emoción de la Moto GP en Valencia! Estamos emocionados de invitarte a nuestra feria y ofrecerte la oportunidad de ganar dos entradas para el evento."
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    </mj-wrapper>
+    <mj-wrapper full-width="full-width">
+      <mj-section padding="0">
+        <mj-column width="100%" padding="0">
+          <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
+                  ¡Únete a nuestra comunidad y comienza a ganar! Sigue nuestras redes sociales y participa en nuestros concursos y sorteos. ¡No te pierdas la oportunidad de ser uno de los ganadores!
+                  </mj-text>
+         </mj-column>
+      </mj-section>
+      <mj-section padding="9px">
+        <mj-column width="100%" >
+          <mj-text padding="5px" color="#445566" font-size="11px" font-weight="bold" align="center">
+            Encuentranos en
+          </mj-text>
+          <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="5px" align="center">
+                  <mj-social-element name="facebook" href="https://www.facebook.com/feriavalencia/" background-color="#f92d04">
+                  </mj-social-element>
+                  <mj-social-element name="google" href="https://www.feriavalencia.com/" background-color="#f92d04">
+                  </mj-social-element>
+                  <mj-social-element name="twitter" href="https://x.com/feria_valencia?s=21&t=opG2IdLpGD4Zrckca4PGVA" background-color="#f92d04">
+                  </mj-social-element>
+                  <mj-social-element name="instagram" href="https://www.instagram.com/feriavalencia/" background-color="#f92d04">
+                  </mj-social-element>
+                </mj-social>
+                <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
+                  Este mensaje se ha enviado a <strong> {{email}}</strong> porque elegiste recibir informacion.
+                </mj-text>
+              </mj-column>
+            </mj-section>
+            <mj-section padding-top="0">
+              <mj-group>
+                <mj-column width="100%" padding-right="0">
+                  <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
+                    <a class="footer-link" href="https://www.google.com">Privacy</a>
+                    &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+                    <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
+                  </mj-text>
+                </mj-column>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

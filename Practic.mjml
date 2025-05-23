@@ -1,0 +1,125 @@
+<mjml>
+    <mj-head>
+        <mj-title>Salón del Cómic de València</mj-title>
+        <mj-preview>No te pierdas la oportunidad de conocer ... </mj-preview>
+        <mj-attributes>
+            <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-all>
+            <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-text>
+        </mj-attributes>
+        <!-- Estilo para el wrapper donde se encuentra la informacion principal del correo-->
+        <mj-style inline="inline">
+            .body-section {
+            -webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+            }
+        </mj-style>
+        <mj-style inline="inline">
+            .footer-link {
+            color: #888888
+            }
+        </mj-style>
+      
+    </mj-head>
+ 
+    <mj-body>
+      <!-- Imagen de la feria como cabecera -->
+      <mj-wrapper full-width="full-width">
+      <mj-section background-color="#ffffff" >
+        <mj-column width="100%">
+          <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012331/Comic_qimc8s.jpg"   alt="imagen de publicidad">
+          </mj-image>
+        </mj-column>
+      </mj-section>
+      <!-- Desde aqui inicia el cuerpo del correo -->
+      </mj-wrapper>
+      <mj-wrapper padding="0px" padding-top="0" padding-bottom="0" css-class="body-section">
+        <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" padding="0px">
+          <mj-column width="80%">
+            <!-- Titulo -->
+            <mj-text color="#212b35" font-weight="bold" font-size="20px">
+              ¡Llega el Salón del Cómic de Valencia!
+            </mj-text>
+          </mj-column >
+          </mj-section>
+          <!-- Seccion de texto e imagen -->
+          <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px">
+            <mj-column>
+              <mj-text color="#637381" css-class="small-text">
+                ¡Descubre el mundo del cómic en nuestra feria! Este año, tendremos una selección de los mejores cómics, encuentros con autores y artistas, y actividades para todos los fans. ¡No te pierdas la oportunidad de vivir la emoción del cómic en vivo!
+              </mj-text>
+            </mj-column>
+            <mj-column>
+              <mj-image width="230px" height="250px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012340/img1_xzy10c.jpg" alt="comic" />
+            </mj-column>
+          </mj-section>
+          <!-- con java scrip tratare de realizar el cambio de informacioin dependiendo los px -->
+          <!-- Texto -->
+          <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" css-class="desktop-hidden" >
+            <mj-column width="100%">
+              <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
+                No te pierdas la oportunidad de conocer al legendario Frank Miller!
+              </mj-text>
+              <mj-text color="#637381" css-class="small-text" align="center">
+                ¡Únete a nosotros en una experiencia inolvidable! Tendremos el honor de contar con la presencia del aclamado autor y artista de cómics, Frank Miller. ¡No te pierdas la oportunidad de pasar un rato agradable con él y obtener su firma en una de tus publicaciones favoritas! 
+              </mj-text>
+            </mj-column>
+          </mj-section>
+          <!-- Seccion de informacion de autor -->
+          <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+            <mj-column>
+              <mj-text color="#637381" css-class="small-text">
+                <h3>Firma de autógrafos con Frank Miller</h3>
+                <ul>
+                  <li>Fecha:</li>
+                  <li>Hora:</li>
+                  <li>Lugar:</li>
+                </ul>
+              </mj-text>
+            </mj-column>
+            <mj-column>
+              <mj-image width="260px" height="190px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012304/img7_xaoqxp.jpg" alt="comic" />
+            </mj-column>
+          </mj-section>
+          <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+            <mj-column>
+               <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
+                No te pierdas esta oportunidad única de conocer al creador de Sin City, Batman: El regreso del Caballero Oscuro y muchos otros títulos icónicos!
+              </mj-text>
+            </mj-column>
+          </mj-section>
+        </mj-wrapper>
+        <!-- Pie de pag -->
+        <mj-wrapper full-width="full-width">
+            <mj-section padding="0">
+              <mj-column width="100%">
+                <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
+                  No solo te informamos, también te damos la oportunidad de ganar y ser parte de nuestra comunidad. ¡Sigue nuestras redes sociales y participa en nuestros concursos para no perderte nada!
+                </mj-text>
+                <!-- Redes sociales -->
+                <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0" align="center">
+                  <mj-social-element name="facebook" href="https://www.facebook.com/feriavalencia/" background-color="#538a68">
+                  </mj-social-element>
+                  <mj-social-element name="google" href="https://www.feriavalencia.com/" background-color="#538a68">
+                  </mj-social-element>
+                  <mj-social-element name="twitter" href="https://x.com/feria_valencia?s=21&t=opG2IdLpGD4Zrckca4PGVA" background-color="#538a68">
+                  </mj-social-element>
+                  <mj-social-element name="instagram" href="https://www.instagram.com/feriavalencia/" background-color="#538a68">
+                  </mj-social-element>
+                </mj-social>
+                <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
+                  Este mensaje se ha enviado a <strong> {{email}}</strong> porque elegiste recibir informacion.
+                </mj-text>
+              </mj-column>
+            </mj-section>
+            <mj-section padding-top="0">
+              <mj-group>
+                <mj-column width="100%" padding-right="0">
+                  <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
+                    <a class="footer-link" href="https://www.google.com">Privacy</a>
+                    &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+                    <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
+                  </mj-text>
+                </mj-column>
+        </mj-body>
+  </mjml>
