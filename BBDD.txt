@@ -1,0 +1,25 @@
+MODELON RELACIONAL
+
+USUARIO (Id_Usu, Nombre, Apellido, Fecha_nacimiento, Edad) 
+PK: {Id_Usu} 
+
+EMAILS (Id, Id_Usu, Dire_Correo)
+PK: {Id, Dire_Correo}
+FK: {Id_Usu} - USUARIO
+
+ENVIO (Dire_Correo, Nom_Correo, Fecha)
+PK: {Dire_Correo, Nom_Correo}
+FK: {Nom_Correo} - CORREO
+FK: {Dire_Correo} – EMAILS
+
+CORREO (Nom_Correo, Tipo)
+PK: {Nom_Correo}
+
+SORTEO (Id, Nom_Correo)
+PK: {Id}
+FK: {Nom_Correo} - EMAILS
+
+PARTICIPA (Id, Id_Usu, Dire_Correo)
+PK: {Id}
+FK: {Id,Usu} - USUARIO
+FK: {Dire_Correo} - EMAILS

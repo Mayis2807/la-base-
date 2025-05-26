@@ -27,8 +27,7 @@
       <mj-wrapper full-width="full-width">
       <mj-section background-color="#ffffff" >
         <mj-column width="100%">
-          <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012331/Comic_qimc8s.jpg"   alt="imagen de publicidad">
-          </mj-image>
+          <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012331/Comic_qimc8s.jpg"   alt="imagen de publicidad">          </mj-image>
         </mj-column>
       </mj-section>
       <!-- Desde aqui inicia el cuerpo del correo -->
