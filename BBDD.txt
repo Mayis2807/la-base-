@@ -1,25 +1,68 @@
-MODELON RELACIONAL
+//MODELON RELACIONAL
 
-USUARIO (Id_Usu, Nombre, Apellido, Fecha_nacimiento, Edad) 
-PK: {Id_Usu} 
+USUARIO (Id_Usuario, Nombre, Apellido, Fecha_nacimiento, Idioma, Email) 
+PK: {Id_Usuario} 
 
-EMAILS (Id, Id_Usu, Dire_Correo)
-PK: {Id, Dire_Correo}
-FK: {Id_Usu} - USUARIO
+ENVIO (Email, Nom_Mensaje, Fecha)
+PK: {Email, Nom_Mensaje}
+FK: {Nom_Mensaje} - MENSAJE
+FK: {Email} – USUARIO
 
-ENVIO (Dire_Correo, Nom_Correo, Fecha)
-PK: {Dire_Correo, Nom_Correo}
-FK: {Nom_Correo} - CORREO
-FK: {Dire_Correo} – EMAILS
+MENSAJE (Nom_Mensaje, tipo)
+PK: {Nom_Mensaje}
 
-CORREO (Nom_Correo, Tipo)
-PK: {Nom_Correo}
+PARTICIPA (Codg, Nom_formulario, Email)
+PK: {Codg}
+FK: {Nom_formulario} - FORMULARIO
+FK: {Email} - USUARIO
 
-SORTEO (Id, Nom_Correo)
-PK: {Id}
-FK: {Nom_Correo} - EMAILS
+FORMULARIO (Nom_formulario)
+PK: {Nom_formulario}
 
-PARTICIPA (Id, Id_Usu, Dire_Correo)
-PK: {Id}
-FK: {Id,Usu} - USUARIO
-FK: {Dire_Correo} - EMAILS
+
+CREATE TABLE USUARIO (
+    Id_Usuario           INT AUTO_INCREMENT,
+    Nombre               VARCHAR(20),
+    Apellido             VARCHAR(20), 
+    Fecha_nacimiento     DATE,
+    Idioma               VARCHAR(10),
+    Email                VARCHAR(50),
+    CONSTRAINT usu_idu_pk PRIMARY KEY (Id_Usuario)
+    );
+
+CREATE TABLE ENVIO (
+    id                   INT AUTO_INCREMENT,
+    Id_Usuario           INT,
+    Id_Mensaje           INT,
+    Fecha                DATE,
+    CONSTRAINT env_id_pk PRIMARY KEY (id),
+    CONSTRAINT env_em_fk FOREIGN KEY (Id_Usuario) REFERENCES USUARIO (Id_Usuario),
+    CONSTRAINT env_nomen_fk FOREIGN KEY (Id_Mensaje) REFERENCES MENSAJE (Id_Mensaje)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+    );
+
+CREATE TABLE MENSAJE (
+    Id_Mensaje           INT AUTO_INCREMENT,
+    Nom_Mensaje          VARCHAR(100),
+    tipo                 VARCHAR(10),
+    CONSTRAINT men_nom_pk PRIMARY KEY (Id_Mensaje)
+    );
+
+CREATE TABLE PARTICIPA (
+    Codg                 INT AUTO_INCREMENT,
+    Num_formulario       INT,
+    Id_Usuario           INT,
+    CONSTRAINT prac_cg_pk PRIMARY KEY (Codg),
+    CONSTRAINT prac_ema_fk FOREIGN KEY (Id_Usuario) REFERENCES USUARIO (Id_Usuario)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    CONSTRAINT prac_numfr_fk FOREIGN KEY (Num_formulario) REFERENCES FORMULARIO (Num_formulario)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+    );
+
+CREATE TABLE FORMULARIO (
+    Num_formulario       INT AUTO_INCREMENT,
+    CONSTRAINT for_numf_pk PRIMARY KEY (Num_formulario)
+    );

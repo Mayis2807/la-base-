@@ -19,7 +19,39 @@
             color: #888888
             }
         </mj-style>
-      
+        <!-- CSS personalizado para diferentes tamaños -->
+        <mj-style>
+          /* Estilos para móvil por defecto */
+          .mobile-only { display: block !important; }
+          .desktop-only { display: none !important; }
+          .tablet-only { display: none !important; }
+          
+          /* Media queries para tablet */
+          @media only screen and (min-width: 481px) and (max-width: 768px) {
+            .mobile-only { display: none !important; }
+            .tablet-only { display: block !important; }
+            .desktop-only { display: none !important; }
+          }
+          
+          /* Media queries para desktop */
+          @media only screen and (min-width: 769px) {
+            .mobile-only { display: none !important; }
+            .tablet-only { display: none !important; }
+            .desktop-only { display: block !important; }
+          }
+          
+          /* Ocultar contenido específico */
+          .hide-mobile {
+            display: block !important;
+          }
+          
+          @media only screen and (max-width: 480px) {
+            .hide-mobile {
+              display: none !important;
+            }
+          }
+        </mj-style>
+          
     </mj-head>
  
     <mj-body>
@@ -53,8 +85,8 @@
             </mj-column>
           </mj-section>
           <!-- con java scrip tratare de realizar el cambio de informacioin dependiendo los px -->
-          <!-- Texto -->
-          <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" css-class="desktop-hidden" >
+          <!-- Texto solo mobil-->
+          <mj-section css-class="mobile-only" background-color="#ffffff" padding-left="15px" padding-right="15px" css-class="desktop-hidden" >
             <mj-column width="100%">
               <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
                 No te pierdas la oportunidad de conocer al legendario Frank Miller!
@@ -65,7 +97,7 @@
             </mj-column>
           </mj-section>
           <!-- Seccion de informacion de autor -->
-          <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+          <mj-section css-class="mobile-only"  background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
             <mj-column>
               <mj-text color="#637381" css-class="small-text">
                 <h3>Firma de autógrafos con Frank Miller</h3>
@@ -80,7 +112,7 @@
               <mj-image width="260px" height="190px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012304/img7_xaoqxp.jpg" alt="comic" />
             </mj-column>
           </mj-section>
-          <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+          <mj-section css-class="mobile-only" background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
             <mj-column>
                <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
                 No te pierdas esta oportunidad única de conocer al creador de Sin City, Batman: El regreso del Caballero Oscuro y muchos otros títulos icónicos!
@@ -88,6 +120,79 @@
             </mj-column>
           </mj-section>
         </mj-wrapper>
+
+        <!-- Texto solo tablet-->
+          <mj-section css-class="tablet-only" background-color="#ffffff" padding-left="15px" padding-right="15px" css-class="desktop-hidden" >
+            <mj-column width="100%">
+              <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
+                No te pierdas la oportunidad de conocer al legendario Quino!
+              </mj-text>
+              <mj-text color="#637381" css-class="small-text" align="center">
+                ¡Únete a nosotros en una experiencia inolvidable! Tendremos el honor de contar con la presencia del aclamado autor y artista de cómics, Quino. ¡No te pierdas la oportunidad de pasar un rato agradable con él y obtener su firma en una de tus publicaciones favoritas! 
+              </mj-text>
+            </mj-column>
+          </mj-section>
+          <!-- Seccion de informacion de autor -->
+          <mj-section css-class="tablet-only"  background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+            <mj-column>
+              <mj-text color="#637381" css-class="small-text">
+                <h3>Firma de autógrafos con Quino</h3>
+                <ul>
+                  <li>Fecha:</li>
+                  <li>Hora:</li>
+                  <li>Lugar:</li>
+                </ul>
+              </mj-text>
+            </mj-column>
+            <mj-column>
+              <mj-image width="260px" height="190px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748357403/_114703271_escultura.jpg_bk87ut.webp" alt="comic" />
+            </mj-column>
+          </mj-section>
+          <mj-section css-class="tablet-only" background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+            <mj-column>
+               <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
+                No te pierdas esta oportunidad única de conocer al creador de Mafalda, Mafalda y sus amigos y muchos otros títulos icónicos!
+              </mj-text>
+            </mj-column>
+          </mj-section>
+        </mj-wrapper>
+        
+        <!-- Texto solo desktop-->
+          <mj-section css-class="desktop-only" background-color="#ffffff" padding-left="15px" padding-right="15px" css-class="desktop-hidden" >
+            <mj-column width="100%">
+              <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
+                No te pierdas la oportunidad de conocer al legendario Quino!
+              </mj-text>
+              <mj-text color="#637381" css-class="small-text" align="center">
+                ¡Únete a nosotros en una experiencia inolvidable! Tendremos el honor de contar con la presencia del aclamado autor y artista de cómics, Mujik Park. ¡No te pierdas la oportunidad de pasar un rato agradable con él y obtener su firma en una de tus publicaciones favoritas! 
+              </mj-text>
+            </mj-column>
+          </mj-section>
+          <!-- Seccion de informacion de autor -->
+          <mj-section css-class="desktop-only"  background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+            <mj-column>
+              <mj-text color="#637381" css-class="small-text">
+                <h3>Firma de autógrafos con Mujik Park</h3>
+                <ul>
+                  <li>Fecha:</li>
+                  <li>Hora:</li>
+                  <li>Lugar:</li>
+                </ul>
+              </mj-text>
+            </mj-column>
+            <mj-column>
+              <mj-image width="260px" height="190px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748357935/des1_u6wm20.jpg" alt="comic" />
+            </mj-column>
+          </mj-section>
+          <mj-section css-class="desktop-only" background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+            <mj-column>
+               <mj-text color="#538a68" font-weight="bold" font-size="17px" align="center">
+                No te pierdas esta oportunidad única de conocer al creador de Dr.STONE 27, Dr. Stone 3 y muchos otros títulos icónicos!
+              </mj-text>
+            </mj-column>
+          </mj-section>
+        </mj-wrapper>
+
         <!-- Pie de pag -->
         <mj-wrapper full-width="full-width">
             <mj-section padding="0">
