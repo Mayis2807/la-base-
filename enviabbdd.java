@@ -10,7 +10,7 @@ public class enviabbdd {
     public static void main(String[] args) {
         
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/FeriaValencia", "Admin", "Admin");
+            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/FeriaValencia", "Practicas", "Practicas");
             File f = new File("suscriptores.csv");
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
@@ -19,18 +19,20 @@ public class enviabbdd {
 
             while(linea != null){
 
-                String [] datos = linea.split(",");
+                String [] datos = linea.split(" ");
                 String nombre = datos[0];
-                String email = datos[1];
-                String idioma = datos[2];
-                int suscrito = Integer.parseInt(datos[3]);
+		        String apellido = datos[1];
+		        String fecha = datos[2];
+                String idioma = datos[3];
+		        String email = datos[4];
 
-                String sql = "INSERT INTO suscriptores (nombre, email, idioma, suscrito) VALUES (?,?,?,?)";
+                String sql = "INSERT INTO USUARIO (Nombre, Apellido, Fecha_nacimiento, Idioma, Email) VALUES (?,?,?,?,?)";
                 PreparedStatement st = con.prepareStatement(sql);
                 st.setString(1, nombre);
-                st.setString(2, email);
-                st.setString(3, idioma);
-                st.setInt(4, suscrito);
+                st.setString(2, apellido);
+                st.setString(3, fecha);
+                st.setString(4, idioma);
+		        st.setString(5, email);
                 st.executeUpdate();
                 count++;
                 linea = br.readLine();

@@ -75,7 +75,7 @@
             <!-- Titulo -->
             <mj-text color="#212b35" font-weight="bold" font-size="20px">
               ¡Llega el Salón del Cómic de Valencia!
-            </mj-text>font-family="'Helvetica Neue'
+            </mj-text>
           </mj-column >
         </mj-section>
         <!-- Seccion de texto e imagen -->
