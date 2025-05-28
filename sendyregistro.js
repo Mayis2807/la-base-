@@ -26,56 +26,57 @@ const transporter = nodemailer.createTransport({
   });
 
   const [usuarios] = await connection.execute(
-    'SELECT idUsuario, nombre, email, idioma FROM suscriptores WHERE suscrito = 1'
+    'SELECT Id_Usuario, Nombre, Email, Idioma FROM USUARIO'
   );
-
+/*
   const subjects = {
     es: "SORTEO ENTRADAS GP CHESTE",
     en: "GP CHESTE ENTRIES GIVEAWAY",
     val: "SORTEIG ENTRADES GP XEST",
-  };
+  };*/
 
   for (const user of usuarios) {
-    const lang = user.idioma;
-    const subject = subjects[lang] || subjects['es'];
+    const lang = user.Idioma;
+    //const subject = subjects[lang] || subjects['es'];
+   const subject = '💥EL GANGAZO'
     const fechaEnvio = new Date();
-
-    let mjmlPath = `oficial_${lang}.mjml`;
+    let mjmlPath = `Practic.mjml`;
+    /*let mjmlPath = `oficial_${lang}.mjml`;
     if (!fs.existsSync(mjmlPath)) {
       console.warn(`Plantilla no encontrada para idioma ${lang}, usando español por defecto.`);
       mjmlPath = 'oficial.mjml';
-    }
+    }*/
 
     let mjmlTemplate = fs.readFileSync(mjmlPath, 'utf8');
-    mjmlTemplate = mjmlTemplate.replace('{{nombre}}', user.nombre);
+    mjmlTemplate = mjmlTemplate.replace('{{email}}', user.Email);
     const htmlOutput = mjml(mjmlTemplate).html;
 
     let id_mensaje = null;
     try {
       const [mensajeRows] = await connection.execute(
-        'SELECT idMensaje FROM mensaje WHERE nombre = ?',
+        'SELECT Id_Mensaje FROM MENSAJE WHERE Nom_Mensaje = ?',
         [subject]
       );
 
       if (mensajeRows.length === 0) {
         const [insertResult] = await connection.execute(
-          'INSERT INTO mensaje (nombre, tipo) VALUES (?, ?)',
-          [subject, 'promocional']
+          'INSERT INTO MENSAJE (Nom_Mensaje, tipo) VALUES (?, ?)',
+          [subject, 'promoción']
         );
-        idMensaje = insertResult.insertId;
+        Id_Mensaje = insertResult.insertId;
         console.log(`Mensaje insertado con ID ${id_mensaje}`);
       } else {
-        idMensaje = mensajeRows[0].idMensaje;
+        Id_Mensaje = mensajeRows[0].Id_Mensaje;
       }
     } catch (err) {
       console.error('Error al procesar la tabla mensaje:', err);
       continue;
     }
 
-    if (!user.idUsuario || !idMensaje || !fechaEnvio) {
+    if (!user.Id_Usuario || !Id_Mensaje || !fechaEnvio) {
       console.error('Datos incompletos para registrar envío:', {
-        idUsuario: user.idUsuario,
-        idMensaje,
+        Id_Usuario: user.Id_Usuario,
+        Id_Mensaje,
         fechaEnvio
       });
       continue;
@@ -83,21 +84,21 @@ const transporter = nodemailer.createTransport({
 
     const mailOptions = {
       from: process.env.O365_USER,
-      to: user.email,
+      to: user.Email,
       subject: subject,
       html: htmlOutput
     };
 
     try {
       const info = await transporter.sendMail(mailOptions);
-      console.log(`Correo enviado a ${user.email}:`, info.response);
+      console.log(`Correo enviado a ${user.Email}:`, info.response);
 
       await connection.execute(
-        'INSERT INTO envios (idUsuario, idMensaje, fecha_envio) VALUES (?, ?, ?)',
-        [user.idUsuario, idMensaje, fechaEnvio]
+        'INSERT INTO ENVIO (Id_Usuario, Id_Mensaje, Fecha) VALUES (?, ?, ?)',
+        [user.Id_Usuario, Id_Mensaje, fechaEnvio]
       );
     } catch (err) {
-      console.error(`Error al enviar a ${user.email}:`, err);
+      console.error(`Error al enviar a ${user.Email}:`, err);
     }
   }
 
