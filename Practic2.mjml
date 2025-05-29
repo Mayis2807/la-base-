@@ -1,68 +1,143 @@
 <mjml>
   <mj-head>
-    <mj-title>2 Ruedas València</mj-title>
-    <mj-preview>¿Eres un fanático de las motos?</mj-preview>
+    <mj-title>Salon de Comic València</mj-title>
+    <mj-preview>🏁🏍️¿Eres un fanático de los comics?</mj-preview>
     <mj-attributes>
-      <mj-text padding="0" />
       <mj-all font-family="Arial" />
     </mj-attributes>
+    <mj-style inline="inline">
+          .body-section {
+            -webkit-box-shadow: 1px 4px 11px 0px rgb(255, 0, 0);
+            -moz-box-shadow: 1px 4px 11px 0px rgb(255, 0, 0);
+            box-shadow: 1px 4px 11px 0px rgb(255, 0, 0);
+          }
+        </mj-style>
+        <mj-style>
+          .btn {
+            background-color: #ff3b00 !important;
+            color: white !important;
+            font-weight: bold;
+            border-radius: 6px;
+            padding: 15px 30px !important;
+            font-size: 18px !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+          }
+        </mj-style>
+        <mj-style inline="inline">
+            .footer-link {
+            color:rgb(71, 71, 71)
+            }
+        </mj-style>
+        <mj-style>
+      /* Estilos para móvil por defecto */
+      .mobile-only { display: block !important; }
+      .desktop-only { display: none !important; }
+      
+      /* Media queries para desktop */
+      @media only screen and (min-width: 769px) {
+        .mobile-only { display: none !important; }
+        .desktop-only { display: block !important; }
+      }
+      
+      /* Ocultar contenido específico */
+      .hide-mobile {
+        display: block !important;
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .hide-mobile {
+          display: none !important;
+        }
+      }
+    </mj-style>
   </mj-head>
-  <mj-body>
+ 
+  <mj-body background-color="rgb(34, 34, 34)">
     <!-- Imagen de la feria como cabecera -->
-    <mj-wrapper full-width="full-width">
-      <mj-section background-color="#ffffff" >
+    <mj-wrapper full-width="full-width" >
+      <mj-section padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px">
         <mj-column width="100%">
-          
-          <mj-text color="#ee2d13" font-weight="bold" font-size="30px" align="center" >
-            ¡Vive la emoción de la Moto GP en Valencia!
-          </mj-text>
-          <mj-image width="400px" height="250px" padding="2px"  padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748275285/WhatsApp_Image_2025-05-26_at_5.22.53_PM_vh6ujw.jpg" alt="imagen de publicidad"> </mj-image>
+          <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012356/img1_1_zzpudf.jpg"   alt="imagen de publicidad" /> 
         </mj-column>
       </mj-section>
-      <mj-section  padding="0" >
-        <mj-column>
-          <mj-text padding="10px" align="center" color="#ee2d13" font-size="18px" font-family="Univers">
-            ¡Participa en nuestro sorteo exclusivo!
-          </mj-text>
-          <mj-text padding="10px" align="center">
-            Los organizadores de Feria Valencia y Dos Ruedas están encantados de anunciar que puedes ganar dos entradas gratuitas. Solo necesitas rellenar el siguiente formulario para participar en el sorteo.
-          </mj-text>
-          <mj-text color="#445566" font-size="18px" align="center" line-height="16px" font-family="Univers">
-            No te pierdas la oportunidad de vivir una experiencia inolvidable.
-          </mj-text>
-          <mj-button font-family="Univers" background-color="#ee2d13" color="white">
-            click me!
-          </mj-button>
-          <mj-text color="#ee2d13" font-family="Univers" font-weight="bold" font-size="20px" align="center" >
-            ¡Buena suerte! 
-          </mj-text>
-          <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012356/img1_1_zzpudf.jpg"   alt="imagen de publicidad"> </mj-image>  
+    </mj-wrapper>  
+    <mj-wrapper padding="0px" padding-top="0" padding-bottom="0" css-class="body-section">
+        <mj-section background-color="rgb(0, 0, 0)" padding-left="15px" padding-right="15px" padding="0px">
+          <mj-column width="80%">
+            <!-- Titulo -->
+            <mj-text padding-top="30px" color="rgb(255, 255, 255)" font-weight="bold" font-size="20px">
+              ¡Siente la emoción del MotoGP en Valencia! 🏁🏍️
+            </mj-text>
+            <mj-text padding-top="30px" color="rgb(255, 255, 255)" font-weight="bold" font-size="20px">
+              <strong style="color: rgb(194, 50, 50)"> {{nombre}}</strong> 
+            </mj-text>
+            <mj-text color="rgb(255, 255, 255)" font-size="16px" line-height="1.5" padding="10px 0">
+              Los organizadores de <span style="color:rgb(255, 0, 0); font-weight:bold;">Feria Valencia</span> y <span style="color:rgb(255, 0, 0); font-weight:bold;">Dos Ruedas</span> te traen una oportunidad única: ¡puedes ganar <strong>2 entradas gratuitas</strong> para el próximo Gran Premio de MotoGP en Valencia!
+            </mj-text>
+            <mj-text color="rgb(255, 255, 255)"font-size="16px" line-height="1.5" padding="10px 0">
+              Imagina vivir en directo la velocidad, la adrenalina y el rugido de las motos más rápidas del mundo, sintiendo la energía de los pilotos campeones y la atmósfera vibrante del Circuit Ricardo Tormo.
+            </mj-text>
+            <mj-text color="rgb(255, 255, 255)" font-size="16px" line-height="1.5" padding="10px 0">
+              Participar es muy fácil: solo tienes que rellenar el formulario que encontrarás en el enlace al final de este correo. Completarlo solo te tomará unos minutos y te permitirá entrar en nuestro sorteo exclusivo.
+            </mj-text>
+            <mj-divider border-color="rgb(255, 0, 0)" border-width="2px" padding="15px 0" />
+            <mj-text color="rgb(255, 255, 255)" font-size="20px" color="#ffa04d" font-weight="bold" padding-bottom="3px">
+              ¿Qué incluye el premio?
+            </mj-text>
+            <mj-text color="#637381" font-size="16px" line-height="1.0" padding="8px 0" >
+              <ul>
+                <li>2 entradas para la carrera oficial del MotoGP en Valencia</li>
+                <li>Acceso a zonas con las mejores vistas</li>
+                <li>Una experiencia inolvidable cerca de la acción</li>
+              </ul>
+            </mj-text>
+            <mj-text color="rgb(255, 255, 255)" font-size="16px" line-height="1.5" padding="0 0 15px 0">
+              No pierdas esta oportunidad de vivir uno de los eventos deportivos más emocionantes del año junto a tu acompañante, totalmente gratis.
+            </mj-text>
+            <mj-button href="https://www.feriavalencia.com/" background-color="rgb(255, 0, 0)" font-weight="bold" font-size="18px" border-radius="6px" padding="15px 0" target="_blank" rel="noopener">
+              ¡participar!
+            </mj-button>
+            <mj-text color="rgb(255, 255, 255)" font-size="16px" line-height="1.5" padding="15px 0 5px 0">
+              El sorteo se realizará el <strong>día 10 de octubre</strong>, así que asegúrate de enviar tu formulario antes de esa fecha.
+            </mj-text>
+            <mj-text color="rgb(255, 255, 255)" font-size="16px" line-height="1.5" padding="5px 0 15px 0">
+              Si tienes alguna pregunta, no dudes en contactarnos respondiendo a este correo.
+            </mj-text>
+            <mj-text font-size="16px" line-height="1.5" padding="0" font-weight="bold" color="rgb(255, 0, 0)" align="center">
+              ¡Te deseamos muchísima suerte! 🍀
+            </mj-text>
+          </mj-column >
+        </mj-section >
+        <mj-section background-color="rgb(0, 0, 0)" padding-left="15px" padding-right="15px" padding="0px" padding-bottom="30px">
+        <mj-column >
+          <mj-image width="300px" height="180px" padding="2px"  padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748275285/WhatsApp_Image_2025-05-26_at_5.22.53_PM_vh6ujw.jpg" alt="imagen de publicidad"> </mj-image>
         </mj-column>
       </mj-section>
-    </mj-wrapper>
-    
+    </mj-wrapper> 
+    <!-- Pie de pag -->
     <mj-wrapper full-width="full-width">
       <mj-section padding="0">
-        <mj-column width="100%" padding="0">
-          <mj-divider padding-left="0px" padding-right="0px"></mj-divider>
-          <mj-image width="80px" height="70px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748280614/WhatsApp_Image_2025-05-26_at_7.29.49_PM_zzwxsf.jpg" alt="2ruedas" />
-        </mj-column>
-      </mj-section>
-      <mj-section padding="5px">
-        <mj-column width="100%" >
-          <mj-social font-size="15px" icon-size="20px" mode="horizontal" padding="2px" align="center">
-            <mj-social-element name="facebook" href="https://www.facebook.com/feriavalencia/" background-color="#ee2d13">
-              </mj-social-element>
-              <mj-social-element name="google" href="https://www.feriavalencia.com/" background-color="#ee2d13">
-              </mj-social-element>
-              <mj-social-element name="twitter" href="https://x.com/feria_valencia?s=21&t=opG2IdLpGD4Zrckca4PGVA" background-color="#ee2d13">
-              </mj-social-element>
-              <mj-social-element name="instagram" href="https://www.instagram.com/feriavalencia/" background-color="#ee2d13">
+        <mj-column width="100%">
+          <mj-text color="#999999" font-size="11px" align="center" line-height="16px">
+            Este sorteo es organizado por Feria Valencia y Dos Ruedas. Consulta las bases legales en nuestro sitio web.
+          </mj-text>
+          <mj-text color="#999999" font-size="11px" align="center" line-height="16px">
+            No solo te informamos, también te damos la oportunidad de ganar y ser parte de nuestra comunidad. ¡Sigue nuestras redes sociales y participa en nuestros concursos para no perderte nada!
+          </mj-text>
+          <!-- Redes sociales -->
+          <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0" align="center">
+            <mj-social-element name="facebook" href="https://www.facebook.com/feriavalencia/" background-color="rgb(194, 50, 50)">
+            </mj-social-element>
+            <mj-social-element name="google" href="https://www.feriavalencia.com/" background-color="rgb(194, 50, 50)">
+            </mj-social-element>
+            <mj-social-element name="twitter" href="https://x.com/feria_valencia?s=21&t=opG2IdLpGD4Zrckca4PGVA" background-color="rgb(194, 50, 50)">
+            </mj-social-element>
+            <mj-social-element name="instagram" href="https://www.instagram.com/feriavalencia/" background-color="rgb(194, 50, 50)">
             </mj-social-element>
           </mj-social>
-          <mj-divider padding-left="0px" padding-right="0px"></mj-divider>
-          <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
-            Este mensaje se ha enviado a <strong> {{email}}</strong> porque elegiste recibir informacion.
+          <mj-text color="#999999" font-size="11px" align="center" line-height="16px">
+            Este mensaje se ha enviado a <strong style="color: rgb(194, 50, 50)"> {{email}}</strong> porque elegiste recibir informacion.
           </mj-text>
         </mj-column>
       </mj-section>
@@ -74,8 +149,9 @@
               &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
               <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
             </mj-text>
-        </mj-column>
-      </mj-column>
-    </mj-section>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper> 
   </mj-body>
 </mjml>
