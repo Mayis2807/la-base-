@@ -1,19 +1,36 @@
 <mjml>
     <mj-head>
         <mj-title>Salón del Cómic de València</mj-title>
-        <mj-preview>No te pierdas la oportunidad de conocer ... </mj-preview>
+        <mj-preview>🦸 No te pierdas la oportunidad de conocer ... </mj-preview>
         <mj-attributes>
             <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-all>
             <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-text>
         </mj-attributes>
         <!-- Estilo para el wrapper donde se encuentra la informacion principal del correo-->
         <mj-style inline="inline">
-            .body-section {
+          .body-section {
+            /* Prefijos para compatibilidad */
             -webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
             -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
             box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
-            }
+            
+            /* Fallback para Gmail (borde sutil como alternativa) */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            
+            /* Mejoras adicionales para Gmail */
+            background-color: #ffffff;
+            border-radius: 4px;
+          }
+          
+          /* Versión específica para Gmail que no soporta box-shadow */
+          [data-ogsc] .body-section,
+          .gmail_quote .body-section {
+            box-shadow: none !important;
+            border: 1px solid #e0e0e0;
+            background-color: #ffffff;
+          }
         </mj-style>
+        
         <mj-style inline="inline">
             .footer-link {
             color: #888888
@@ -24,7 +41,8 @@
           color: #538a68
           }
         </mj-style>
-        <!-- CSS personalizado para diferentes tamaños -->
+        
+        <!--CSS personalizado para diferentes tamaños -->
         <mj-style>
           /* Estilos para móvil por defecto */
           .mobile-only { display: block !important; }
@@ -59,17 +77,17 @@
           
     </mj-head>
  
-    <mj-body>
+    <mj-body background-color="#B8D093">
       <!-- Imagen de la feria como cabecera -->
-      <mj-wrapper full-width="full-width">
-      <mj-section background-color="#ffffff" >
-        <mj-column width="100%">
+      <mj-wrapper full-width="full-width" padding-bottom="0">
+      <mj-section background-color="#B8D093" padding-bottom="0" >
+        <mj-column width="100%" >
           <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012331/Comic_qimc8s.jpg"   alt="imagen de publicidad">          </mj-image>
         </mj-column>
       </mj-section>
       <!-- Desde aqui inicia el cuerpo del correo -->
       </mj-wrapper>
-      <mj-wrapper padding="0px" padding-top="0" padding-bottom="0" css-class="body-section">
+      <mj-wrapper padding="0px" padding-top="0" padding-bottom="0" css-class="body-section" css-class="gmail_quote">
         <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" padding="0px">
           <mj-column width="80%">
             <!-- Titulo -->

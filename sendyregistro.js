@@ -38,7 +38,7 @@ const transporter = nodemailer.createTransport({
   for (const user of usuarios) {
     const lang = user.Idioma;
     //const subject = subjects[lang] || subjects['es'];
-   const subject = '💥EL GANGAZO'
+    const subject = '💥EL GANGAZO'
     const fechaEnvio = new Date();
     let mjmlPath = `Practic.mjml`;
     /*let mjmlPath = `oficial_${lang}.mjml`;

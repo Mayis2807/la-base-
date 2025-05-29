@@ -24,9 +24,9 @@ CREATE TABLE USUARIO (
     Id_Usuario           INT AUTO_INCREMENT,
     Nombre               VARCHAR(20),
     Apellido             VARCHAR(20), 
-    Fecha_nacimiento     DATE,
     Idioma               VARCHAR(10),
     Email                VARCHAR(50),
+    Edad                 INT,
     CONSTRAINT usu_idu_pk PRIMARY KEY (Id_Usuario)
     );
 
@@ -34,9 +34,11 @@ CREATE TABLE ENVIO (
     id                   INT AUTO_INCREMENT,
     Id_Usuario           INT,
     Id_Mensaje           INT,
-    Fecha                DATE,
+    Fecha                DATETIME,
     CONSTRAINT env_id_pk PRIMARY KEY (id),
-    CONSTRAINT env_em_fk FOREIGN KEY (Id_Usuario) REFERENCES USUARIO (Id_Usuario),
+    CONSTRAINT env_em_fk FOREIGN KEY (Id_Usuario) REFERENCES USUARIO (Id_Usuario)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
     CONSTRAINT env_nomen_fk FOREIGN KEY (Id_Mensaje) REFERENCES MENSAJE (Id_Mensaje)
     ON DELETE CASCADE
     ON UPDATE CASCADE
