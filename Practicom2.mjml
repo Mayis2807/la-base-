@@ -1,0 +1,251 @@
+<mjml>
+  <mj-head>
+    <mj-title>Salon de Comic València</mj-title>
+    <mj-preview>🎮 ¿Eres un fanático de los comics?</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Arial" />
+    </mj-attributes>
+    <!-- Borde sombra -->
+    <mj-style inline="inline">
+        .body-section {
+        -webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+        }
+    </mj-style>
+    <mj-style inline="inline">
+        .footer-link {
+        color: #B8D093
+        }
+    </mj-style>
+    <!-- Codigo para ver el tamaño -->
+    <mj-style>
+      /* Estilos para móvil por defecto */
+      .mobile-only { display: block !important; }
+      .desktop-only { display: none !important; }
+      
+      /* Media queries para desktop */
+      @media only screen and (min-width: 769px) {
+        .mobile-only { display: none !important; }
+        .desktop-only { display: block !important; }
+      }
+      
+      /* Ocultar contenido específico */
+      .hide-mobile {
+        display: block !important;
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .hide-mobile {
+          display: none !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+ 
+  <mj-body background-color="#B8D093">
+     <!-- Imagen de la feria como cabecera -->
+    <mj-wrapper full-width="full-width" >
+      <mj-section padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px">
+        <mj-column width="100%">
+          <mj-image padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748012331/Comic_qimc8s.jpg"   alt="imagen de publicidad" /> 
+        </mj-column>
+      </mj-section>
+      <mj-section padding-bottom="0px" padding-top="15px">
+        <mj-column width="100%">
+            <!-- Titulo -->
+            <mj-text color="rgb(255, 255, 255)" font-weight="bold" font-size="25px" align="center">
+              ¡TU DOSIS DE AVENTURA A LLEGADO!
+            </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-bottom="0px" padding-top="0px" padding-left="0px" padding-right="0px">
+        <mj-column width="100%">
+          <mj-image width="370px" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748468507/WhatsApp_Image_2025-05-28_at_11.38.32_PM_pcvb79.jpg"   alt="imagen de publicidad" /> 
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>  
+    <mj-wrapper padding="0px" padding-top="0" padding-bottom="0" css-class="body-section">
+      <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" padding="0px">
+        <mj-column width="80%">
+          <!-- Titulo coreo -->
+          <mj-text padding-top="30px" color="#212b35" font-weight="bold" font-size="20px">
+            🦸 ¡LA FERIA DE CÓMICS MÁS ÉPICA DEL AÑO ESTÁ AQUÍ! 💥
+          </mj-text>
+        </mj-column >
+      </mj-section>
+      <!-- Seccion 1 -->
+      <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px">
+        <mj-column>
+          <mj-text color="#637381">
+            ¿Estás listo para sumergirte en un universo de aventuras, superhéroes y mundos fantásticos?
+          </mj-text>
+          <mj-text color="#637381" >
+            🎯 3 DÍAS DE PURA ADRENALINA GEEK
+          </mj-text>
+          <mj-text color="#637381" >
+            📅 Del 15 al 17 de Junio
+          </mj-text>
+          <mj-text color="#637381" >
+            🏢 Centro de Convenciones Metropolitan
+          </mj-text>
+          <mj-text color="#637381" >
+            🕐 De 10:00 AM a 8:00 PM
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section  background-color="#ffffff" padding-left="15px" padding-right="15px" padding="0px">
+        <mj-column>
+          <mj-divider border-width="2px" border-color="#327349" />
+        </mj-column>
+      </mj-section>
+      <!-- Seccion 2-->
+      <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px">
+        <mj-column>
+          <mj-text color="#637381" font-weight="bold" >
+            ⚡ LO QUE TE ESPERA:
+          </mj-text>
+          <mj-text color="#637381" >
+            🔥 <strong>+200 STANDS</strong> con los cómics más hot del momento
+          </mj-text>
+          <mj-text color="#637381" >
+            🎨 <strong>ARTISTAS EN VIVO</strong> creando ante tus ojos (¡pide tu sketch personalizado!)
+          </mj-text>
+          <mj-text color="#637381" >
+            🏆 <strong>CONCURSO DE COSPLAY</strong> con premios inimaginables
+          </mj-text>
+          <mj-text color="#637381" >
+            📚 <strong>LANZAMIENTOS EXCLUSIVOS</strong> que no encontrarás en otro lado
+          </mj-text>
+          <mj-text color="#637381" >
+            🎁 <strong>EDICIONES LIMITADAS</strong> numeradas y firmadas por los autores
+          </mj-text>
+          <mj-text color="#637381" >
+            💰 <strong>DESCUENTOS DE HASTA 50%</strong> en tus títulos favoritos
+          </mj-text>
+          <mj-text color="#637381" >
+            🎮 <strong>ZONA GAMING</strong> con torneos de videojuegos retro
+          </mj-text>
+          <mj-text color="#637381" >
+            📸 <strong>PHOTO BOOTHS</strong> con escenarios de tus sagas preferidas
+          </mj-text>
+          <mj-text color="#637381" >
+            🛍️ <strong>MERCADO VINTAGE</strong> con cómics de colección y rarezas únicas
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section  background-color="#ffffff" padding-left="15px" padding-right="15px" padding="0px">
+        <mj-column>
+          <mj-divider border-width="2px" border-color="#327349" />
+        </mj-column>
+      </mj-section>
+      <!-- Seccion 3 -->
+      <!-- seccion solo pc-->
+      <mj-section css-class="desktop-only" background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px">
+        <mj-column>
+          <mj-text color="#637381" font-weight="bold" >
+            🌟 INVITADOS ESPECIALES
+          </mj-text>
+          <mj-text color="#637381" >
+            🎭 <strong>PANEL DE SUPERHÉROES -</strong>  Los creadores de Marvel y DC revelan secretos nunca antes contados
+          </mj-text>
+          <mj-text color="#637381" >
+            ✍️ <strong>SESIONES DE FIRMAS</strong> con los artistas más reconocidos de la industria
+          </mj-text>
+          <mj-text color="#637381" >
+            📺 <strong>MASTERCLASS DE DIBUJO -</strong> Aprende técnicas profesionales
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section  css-class="desktop-only" background-color="#ffffff" padding-left="15px" padding-right="15px" padding="0px">
+        <mj-column>
+          <mj-divider border-width="2px" border-color="#327349" />
+        </mj-column>
+      </mj-section>
+      <!-- Seccion 4 -->
+      <mj-section background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" padding-bottom="15px">
+        <mj-column>
+          <mj-text color="#637381" font-weight="bold" >
+            🚨 ¡ÚLTIMAS 48 HORAS DE PREVENTA!
+          </mj-text>
+          <mj-text color="#637381" font-weight="bold" >
+            ⚡ BONUS EXCLUSIVOS SI COMPRAS HOY:
+          </mj-text>
+          <mj-text color="#637381" line-height="16px" padding-top="0px">
+            <ul>
+              <li>Cómic de edición especial de la feria (¡Solo 500 copias!)</li>
+              <li>Stickers holográficos coleccionables</li>
+              <li>Acceso anticipado 1 hora antes del público general</li>
+              <li>Bolsa ecológica con diseño exclusivo</li>
+            </ul>
+          </mj-text>
+          <mj-text color="#637381" >
+            No te quedes fuera de la experiencia más épica del año. Tus héroes favoritos te están esperando.
+          </mj-text>
+          <mj-text color="#637381" >
+            <strong>COMPRA AQUÍ:</strong> <a href="https://www.feriavalencia.com/"> www.feriavalencia.com </a>
+          </mj-text>
+          <mj-text color="#637381" >
+            📱 <strong>INFO Y ACTUALIZACIONES:</strong> Síguenos en <a style="color:#327349;" href="https://www.feriavalencia.com/"> @FeriaComicsOficial </a>
+          </mj-text>
+          <mj-text color="#637381" >
+            🚗 <strong>ESTACIONAMIENTO GRATUITO</strong> disponible (espacios limitados)
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- Imagenes -->
+      <mj-section css-class="desktop-only" background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" padding-bottom="15px">
+        <mj-group>
+          <mj-column>
+            <mj-image width="130px" height="100px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748269322/53414137399_98ce782266_c_wbigbp.jpg" />
+          </mj-column>
+          <mj-column>
+            <mj-image width="140px" height="100px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748269308/52725417550_48705c3557_k_jrko8z.jpg" />
+          </mj-column>
+          <mj-column>
+            <mj-image width="140px" height="100px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748269316/53413968493_c03ea5ca65_c_jqfsgz.jpg" />
+          </mj-column>
+          <mj-column>
+            <mj-image width="130px" height="100px" padding="0" src="https://res.cloudinary.com/dohzmsyo6/image/upload/v1748357935/des1_u6wm20.jpg" />
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper> 
+    
+    <!-- Pie de pag -->
+    <mj-wrapper full-width="full-width">
+      <mj-section padding="0">
+        <mj-column width="100%">
+          <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
+            No solo te informamos, también te damos la oportunidad de ganar y ser parte de nuestra comunidad. ¡Sigue nuestras redes sociales y participa en nuestros concursos para no perderte nada!
+          </mj-text>
+          <!-- Redes sociales -->
+          <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0" align="center">
+            <mj-social-element name="facebook" href="https://www.facebook.com/feriavalencia/" background-color="#538a68">
+            </mj-social-element>
+            <mj-social-element name="google" href="https://www.feriavalencia.com/" background-color="#538a68">
+            </mj-social-element>
+            <mj-social-element name="twitter" href="https://x.com/feria_valencia?s=21&t=opG2IdLpGD4Zrckca4PGVA" background-color="#538a68">
+            </mj-social-element>
+            <mj-social-element name="instagram" href="https://www.instagram.com/feriavalencia/" background-color="#538a68">
+            </mj-social-element>
+          </mj-social>
+          <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
+            Este mensaje se ha enviado a <strong> {{email}}</strong> porque elegiste recibir informacion.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="0">
+        <mj-group>
+          <mj-column width="100%" padding-right="0">
+            <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
+              <a class="footer-link" href="https://www.google.com">Privacy</a>
+              &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+              <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
+            </mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
