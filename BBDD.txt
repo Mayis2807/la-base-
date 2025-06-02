@@ -1,23 +1,23 @@
 //MODELON RELACIONAL
 
-USUARIO (Id_Usuario, Nombre, Apellido, Fecha_nacimiento, Idioma, Email) 
+USUARIO (Id_Usuario, Nombre, Apellido, Idioma, Email, Edad) 
 PK: {Id_Usuario} 
 
-ENVIO (Email, Nom_Mensaje, Fecha)
-PK: {Email, Nom_Mensaje}
-FK: {Nom_Mensaje} - MENSAJE
-FK: {Email} – USUARIO
+ENVIO (Id, Id_Ususario, Id_Mensaje, Fecha)
+PK: {Id}
+FK: {Id_Mensaje} - MENSAJE
+FK: {Id_Ususario} – USUARIO
 
-MENSAJE (Nom_Mensaje, tipo)
-PK: {Nom_Mensaje}
+MENSAJE (Id_Mensaje, Nom_Mensaje, tipo)
+PK: {Id_Mensaje}
 
-PARTICIPA (Codg, Nom_formulario, Email)
+PARTICIPA (Codg, Num_formulario, Id_Ususario)
 PK: {Codg}
-FK: {Nom_formulario} - FORMULARIO
-FK: {Email} - USUARIO
+FK: {Num_formulario} - FORMULARIO
+FK: {Id_Ususario} - USUARIO
 
-FORMULARIO (Nom_formulario)
-PK: {Nom_formulario}
+FORMULARIO (Num_formulario)
+PK: {Num_formulario}
 
 
 CREATE TABLE USUARIO (

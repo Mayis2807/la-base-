@@ -1,10 +1,6 @@
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.io.*;
+import java.sql.*;
 
 public class enviabbdd {
     public static void main(String[] args) {

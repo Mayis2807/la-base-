@@ -1,9 +1,11 @@
-const fs = require('fs');
-const mjml = require('mjml');
-const nodemailer = require('nodemailer');
-const mysql = require('mysql2/promise');
-require('dotenv').config();
+// LIBRERIAS Y CONFIGURACION INICIAL 
+const fs = require('fs'); // Para leer archivo del sistema
+const mjml = require('mjml'); // Para convertir planilla MJML en HTML
+const nodemailer = require('nodemailer'); // Para enviar los emails
+const mysql = require('mysql2/promise'); // Para conectar con MySQL
+require('dotenv').config(); // Para cargar variables del entorno .env
 
+// CONFIGURACION DEL TRANSPORTADOR DE EMAIL
 const transporter = nodemailer.createTransport({
   host: 'smtp.office365.com',
   port: 587,
