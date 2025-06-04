@@ -1,4 +1,4 @@
-//MODELON RELACIONAL
+//MODELO RELACIONAL
 
 USUARIO (Id_Usuario, Nombre, Apellido, Idioma, Email, Edad) 
 PK: {Id_Usuario} 
