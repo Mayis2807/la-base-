@@ -208,7 +208,7 @@
         
         <!-- Texto solo desktop-->
         <!-- Seccion de informacion de autor -->
-        <mj-section css-class="desktop-only"  background-color="#ffffff" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
+        <mj-section css-class="desktop-only"  background-color="rgb(255, 255, 255)" padding-left="35px" padding-right="35px" padding="0px" css-class="desktop-hidden">
           <mj-column>
             <mj-text color="#637381" css-class="small-text">
               <h3>Firma de autógrafos con Mujik Park</h3>
@@ -251,20 +251,18 @@
               </mj-social-element>
             </mj-social>
             <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
-              Este mensaje se ha enviado a <strong> {{email}}</strong> porque elegiste recibir informacion.
+              Este mensaje se ha enviado a <strong> {{email}}</strong> porque elegiste recibir información.
             </mj-text>
           </mj-column>
         </mj-section>
         <mj-section padding-top="0">
-          <mj-group>
-            <mj-column width="100%" padding-right="0">
-              <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
-                <a class="footer-link" href="https://www.google.com">Privacy</a>
-                &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-                <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
-              </mj-text>
-            </mj-column>
-          </mj-group>
+          <mj-column width="100%" padding-right="0">
+            <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
+              <a class="footer-link" href="https://www.google.com">Privacy</a>
+              &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+              <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
+            </mj-text>
+          </mj-column>
         </mj-section>
       </mj-wrapper>
     </mj-body>

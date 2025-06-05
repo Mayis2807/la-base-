@@ -20,36 +20,48 @@ FORMULARIO (Num_formulario)
 PK: {Num_formulario}
 
 
+CREATE DATABASE FeriaValencia;
+USE FeriaValencia;
+
 CREATE TABLE USUARIO (
     Id_Usuario           INT AUTO_INCREMENT,
-    Nombre               VARCHAR(20),
-    Apellido             VARCHAR(20), 
+    Nombre               VARCHAR(50),
+    Apellido             VARCHAR(50),
     Idioma               VARCHAR(10),
-    Email                VARCHAR(50),
-    Edad                 INT,
+    Email                VARCHAR(100) UNIQUE NOT NULL,
+    Edad                 INT CHECK (Edad >= 0),
     CONSTRAINT usu_idu_pk PRIMARY KEY (Id_Usuario)
-    );
-
-CREATE TABLE ENVIO (
-    id                   INT AUTO_INCREMENT,
-    Id_Usuario           INT,
-    Id_Mensaje           INT,
-    Fecha                DATETIME,
-    CONSTRAINT env_id_pk PRIMARY KEY (id),
-    CONSTRAINT env_em_fk FOREIGN KEY (Id_Usuario) REFERENCES USUARIO (Id_Usuario)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-    CONSTRAINT env_nomen_fk FOREIGN KEY (Id_Mensaje) REFERENCES MENSAJE (Id_Mensaje)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE
-    );
+);
 
 CREATE TABLE MENSAJE (
     Id_Mensaje           INT AUTO_INCREMENT,
     Nom_Mensaje          VARCHAR(100),
-    tipo                 VARCHAR(10),
+    Tipo                 VARCHAR(20),
+    Fecha_Creacion       DATETIME DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT men_nom_pk PRIMARY KEY (Id_Mensaje)
-    );
+);
+
+CREATE TABLE FORMULARIO (
+    Num_formulario       INT AUTO_INCREMENT,
+    Titulo               VARCHAR(100),
+    Fecha_Creacion       DATETIME DEFAULT CURRENT_TIMESTAMP,
+    Estado               VARCHAR(20) DEFAULT 'ACTIVO',
+    CONSTRAINT for_numf_pk PRIMARY KEY (Num_formulario)
+);
+
+CREATE TABLE ENVIO (
+    Id                   INT AUTO_INCREMENT,  -- Capitalizado
+    Id_Usuario           INT,
+    Id_Mensaje           INT,
+    Fecha                DATETIME,
+    CONSTRAINT env_id_pk PRIMARY KEY (Id),
+    CONSTRAINT env_em_fk FOREIGN KEY (Id_Usuario) REFERENCES USUARIO (Id_Usuario)
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE,
+    CONSTRAINT env_nomen_fk FOREIGN KEY (Id_Mensaje) REFERENCES MENSAJE (Id_Mensaje)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
 
 CREATE TABLE PARTICIPA (
     Codg                 INT AUTO_INCREMENT,
@@ -62,9 +74,4 @@ CREATE TABLE PARTICIPA (
     CONSTRAINT prac_numfr_fk FOREIGN KEY (Num_formulario) REFERENCES FORMULARIO (Num_formulario)
     ON DELETE CASCADE
     ON UPDATE CASCADE
-    );
-
-CREATE TABLE FORMULARIO (
-    Num_formulario       INT AUTO_INCREMENT,
-    CONSTRAINT for_numf_pk PRIMARY KEY (Num_formulario)
-    );
+);

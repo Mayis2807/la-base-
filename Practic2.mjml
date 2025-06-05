@@ -129,7 +129,7 @@
           <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0" align="center">
             <mj-social-element name="facebook" href="https://www.facebook.com/feriavalencia/" background-color="rgb(194, 50, 50)">
             </mj-social-element>
-            <mj-social-element name="google" href="https://www.feriavalencia.com/" background-color="rgb(194, 50, 50)">
+            <mj-social-element name="google" href="https://dosruedas.feriavalencia.com/" background-color="rgb(194, 50, 50)">
             </mj-social-element>
             <mj-social-element name="twitter" href="https://x.com/feria_valencia?s=21&t=opG2IdLpGD4Zrckca4PGVA" background-color="rgb(194, 50, 50)">
             </mj-social-element>
@@ -137,20 +137,18 @@
             </mj-social-element>
           </mj-social>
           <mj-text color="#999999" font-size="11px" align="center" line-height="16px">
-            Este mensaje se ha enviado a <strong style="color: rgb(194, 50, 50)"> {{email}}</strong> porque elegiste recibir informacion.
+            Este mensaje se ha enviado a <strong style="color: rgb(194, 50, 50)"> {{email}}</strong> porque elegiste recibir información.
           </mj-text>
         </mj-column>
       </mj-section>
       <mj-section padding-top="0">
-        <mj-group>
-          <mj-column width="100%" padding-right="0">
-            <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
-              <a class="footer-link" href="https://www.google.com">Privacy</a>
-              &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-              <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
-            </mj-text>
-          </mj-column>
-        </mj-group>
+        <mj-column width="100%" padding-right="0">
+          <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
+            <a class="footer-link" href="https://www.google.com">Privacy</a>
+            &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+            <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
+          </mj-text>
+        </mj-column>
       </mj-section>
     </mj-wrapper> 
   </mj-body>

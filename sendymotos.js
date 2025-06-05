@@ -1,11 +1,12 @@
 // Carga las dependencias necesarias en variables
+// Importacion de librerias 
 const fs = require('fs');
 const mjml = require('mjml');
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');    
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
-// creamos función para el envio de correo
+// Configuracion del transportador de email
 const transporter = nodemailer.createTransport({
   host: 'smtp.office365.com',
   port: 587,
@@ -18,7 +19,7 @@ const transporter = nodemailer.createTransport({
     ciphers: 'SSLv3'
   }
 });
-// sincronizamos la conexión con el usuario que envia a la base de datos
+// Sincronizamos la conexión con el usuario que envia a la base de datos
 (async () => {
   const connection = await mysql.createConnection({
     host: process.env.DB_HOST,
@@ -27,8 +28,7 @@ const transporter = nodemailer.createTransport({
     database: process.env.DB_NAME
   });
 
-  // buscamos los usuarios a los que nos vamos a enfocar
- 
+  // Buscamos los usuarios a los que nos vamos a enfocar
   const [usuarios] = await connection.execute(
     'SELECT Id_Usuario, Nombre, Email, Idioma FROM USUARIO WHERE Edad >= 20'
   );
@@ -41,6 +41,7 @@ const transporter = nodemailer.createTransport({
       console.warn(`Plantilla no encontrada.`);
     }
 
+    // Procesamienrto de plantilla
     let mjmlTemplate = fs.readFileSync(mjmlPath, 'utf8');
     mjmlTemplate = mjmlTemplate.replace('{{nombre}}', user.Nombre);
     mjmlTemplate = mjmlTemplate.replace('{{email}}', user.Email);
@@ -49,8 +50,9 @@ const transporter = nodemailer.createTransport({
     let id_mensaje = null;
     let asunto = '🏍️EL GANGAZO';
     try {
+      // Gestion de mensaje en la base de datos
       const [mensajeRows] = await connection.execute(
-        'SELECT Id_Mensaje FROM MENSAJE WHERE Nom_Mombre = ?',
+        'SELECT Id_Mensaje FROM MENSAJE WHERE Nom_Mensaje = ?',
         [asunto]
       );
 
@@ -78,19 +80,21 @@ const transporter = nodemailer.createTransport({
       continue;
     }
 
+    // Envio del email
     const mailOptions = {
       from: process.env.O365_USER,
-      to: user.email,
+      to: user.Email,
       subject: asunto,
       html: htmlOutput
     };
 
+    // Registro en la base de datos 
     try {
       const info = await transporter.sendMail(mailOptions);
       console.log(`Correo enviado a ${user.Email}:`, info.response);
 
       await connection.execute(
-        'INSERT INTO envios (Id_Usuario, Id_Mensaje, Fecha) VALUES (?, ?, ?)',
+        'INSERT INTO ENVIO (Id_Usuario, Id_Mensaje, Fecha) VALUES (?, ?, ?)',
         [user.Id_Usuario, Id_Mensaje, fechaEnvio]
       );
     } catch (err) {
